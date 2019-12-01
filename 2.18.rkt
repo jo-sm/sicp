@@ -37,25 +37,25 @@
     )
 )
 
-(expect 
+(expect
     "Reverse a list of multiple items"
     (reverse (list 1 2 3 4 5))
     (list 5 4 3 2 1)
 )
 
-(expect 
+(expect
     "Reverse a list of multiple items using a single array"
-    (reverse-solo (list 1 2 3 4 5)) 
+    (reverse-solo (list 1 2 3 4 5))
     (list 5 4 3 2 1)
 )
-(expect 
+(expect
     "Reverse a list of one item"
-    (reverse (list 7)) 
+    (reverse (list 7))
     (list 7)
 )
 
-(expect 
+(expect
     "Reverse a list of two items"
-    (reverse (list 7 3)) 
+    (reverse (list 7 3))
     (list 3 7)
 )

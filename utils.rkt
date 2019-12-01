@@ -30,12 +30,18 @@
 (define (expect description value expected)
     (if (equal? value expected)
         (puts "✓" description)
-        (begin 
+        (begin
             (puts "×" description)
             (puts "    Expected" expected "but got" value)
         )
     )
 )
 
+(define nil '())
+
+; function definitions
 (provide puts)
 (provide expect)
+
+; constants
+(provide nil)

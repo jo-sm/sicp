@@ -3,11 +3,11 @@
 
 ; We assume inputs are sane, i.e. position will never be greater than line number
 (define (p-ele line pos)
-  (cond 
+  (cond
     ((= line 1) 1)
     ((= pos 1) 1)
     ((= pos line) 1)
-    (else (+ 
+    (else (+
       (p-ele (- line 1) (- pos 1))
       (p-ele (- line 1) pos)
     ))

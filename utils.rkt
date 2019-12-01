@@ -32,7 +32,7 @@
         (puts "✓" description)
         (begin 
             (puts "×" description)
-            (puts "    Expected" value "but got" expected)
+            (puts "    Expected" expected "but got" value)
         )
     )
 )

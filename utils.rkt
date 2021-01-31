@@ -39,9 +39,31 @@
 
 (define nil '())
 
+(define (accumulate op init seq)
+  (if (null? seq)
+    init
+    (op (car seq) (accumulate op init (cdr seq)))
+  )
+)
+
+(define fold-right accumulate)
+
+(define (fold-left op init seq)
+  (define (iter result rest)
+    (if (null? rest)
+      result
+      (iter (op result (car rest)) (cdr rest))
+    )
+  )
+
+  (iter init seq)
+)
+
 ; function definitions
 (provide puts)
 (provide expect)
+(provide fold-right)
+(provide fold-left)
 
 ; constants
 (provide nil)
